@@ -1,11 +1,11 @@
-<?xml version = "1.0" encoding="UTF-8"?>
-<!DOCTYPE students
-[<!ELEMENT students (student)*>
- <!ELEMENT student (name,age,specialty,grade)>
- <!ELEMENT name (#PCDATA)>
- <!ELEMENT age (#PCDATA)>
- <!ELEMENT specialty (#PCDATA)>
- <!ELEMENT grade (#PCDATA)>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students [
+    <!ELEMENT students      (student)*>
+    <!ELEMENT student       (name,age,specialty,grade)>
+    <!ELEMENT name          (#PCDATA)>
+    <!ELEMENT age           (#PCDATA)>
+    <!ELEMENT specialty     (#PCDATA)>
+    <!ELEMENT grade         (#PCDATA)>
 ]>
 
 <students>
