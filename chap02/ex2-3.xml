@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BookCatalog>
+    <Book>
+        <Title>XML의 정석</Title>
+        <Author>윤웅상</Author>
+        <Year>2020</Year>
+        <Summary>
+            <![CDATA[ 'XML의 정석' 한 권이면 여러분도 전문가가 될 수 있습니다!  ]]>
+        </Summary>
+    </Book>
+    <Book>
+        <Title>슈퍼 C++</Title>
+        <Author>찰리</Author>
+        <Year>2019</Year>
+        <Summary>
+            <![CDATA[ <<< 4년 연속 베스트셀러 >>> 강의 현장을 그대로 담은 c++ 입문서]]>
+        </Summary>
+    </Book>
+    <Book>
+        <Title>모두의 기업</Title>
+        <Author>김철수</Author>
+        <Year>2010</Year>
+        <Summmary>
+            <![CDATA[ "부자그룹 CEO" 김철수가 말하는 경영전략]]>        
+        </Summmary>
+    </Book>
+    <Book>
+        <Title>누워서 읽어보는 IT</Title>
+        <Author>제임스 킴</Author>
+        <Year>2017</Year>
+        <Summary>
+            <![CDATA[ 세계를 떠들썩하게 한 '알파고'로 살펴보는 IT 기술 ]]>
+        </Summary>
+    </Book>
+    <Book>
+        <Title>쉬운 캘리그라피</Title>
+        <Author>정현지</Author>
+        <Year>2019</Year>
+        <Summary>
+            <![CDATA[ 예쁜 손글씨 & 카드 만들기. 캘리그라피로 마음을 전해보세요. 고급 펜 & 카드지 제공]]>
+        </Summary>
+    </Book>
+</BookCatalog>

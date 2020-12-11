@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- myBooks:BookCatalog xmlns:myBooks="funnyBooks">--> <!-- OK! -->
+<!-- myBooks:BookCatalog xmlns:myBooks="">--> <!-- namespace 지정 X-->
+
+<myBooks:BookCatalog xmlns:myBooks="http://www.cs.skuniv.ac.kr/xml/yoonWS">
+    <myBooks:Book>
+        <myBooks:Title>XML 프로그래밍</myBooks:Title>
+        <myBooks:Author>윤웅상</myBooks:Author>
+        <myBooks:Year>2020</myBooks:Year>
+    </myBooks:Book>
+    <myBooks:Book>
+        <myBooks:Title>C++ 프로그래밍</myBooks:Title>
+        <myBooks:Author>홍길동</myBooks:Author>
+        <myBooks:Year>2019</myBooks:Year>
+    </myBooks:Book>
+    <myBooks:Book>
+        <myBooks:Title>Java 바이블</myBooks:Title>
+        <myBooks:Author>린드블럼</myBooks:Author>
+        <myBooks:Year>2010</myBooks:Year>
+    </myBooks:Book>
+    <myBooks:Book>
+        <myBooks:Title>컴퓨터구조론</myBooks:Title>
+        <myBooks:Author>다니엘 킴</myBooks:Author>
+        <myBooks:Year>2011</myBooks:Year>
+    </myBooks:Book>
+    <myBooks:Book>
+        <myBooks:Title>DIY 인테리어</myBooks:Title>
+        <myBooks:Author>마동석</myBooks:Author>
+        <myBooks:Year>2019</myBooks:Year>
+    </myBooks:Book>
+</myBooks:BookCatalog>
