@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+        targetNamespace="http://skuniv.ac.kr/cs/yoon/powerbanks" 
+        xmlns:powerBanks="http://skuniv.ac.kr/cs/yoon/powerbanks" 
+        elementFormDefault="qualified">
+    <element name="powerbanks">
+        <complexType>
+            <sequence maxOccurs="unbounded">
+                <element ref="powerBanks:powerbank" />
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="powerbank">
+        <complexType>
+            <all>
+                <element name="name" type="string" />
+                <element ref="powerBanks:company" />
+                <element ref="powerBanks:warranty" />
+                <element ref="powerBanks:battery" />
+                <element ref="powerBanks:inputs" />
+                <element ref="powerBanks:outputs" />
+                <element ref="powerBanks:color" />
+                <element ref="powerBanks:size" />
+                <element ref="powerBanks:weight" />
+                <element ref="powerBanks:ManufacturedDate" />
+                <element ref="powerBanks:chargingTime" />
+                <element ref="powerBanks:certified" />
+                <element ref="powerBanks:package" />
+            </all>
+        </complexType>
+    </element>
+
+    <element name="warranty">
+        <complexType mixed="true">
+            <attribute name="시작기준">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="구매일" />
+                        <enumeration value="제조일" />
+                    </restriction>
+                </simpleType>
+            </attribute>
+            <attribute name="날짜단위">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="일" />
+                        <enumeration value="개월" />
+                        <enumeration value="년" />
+                    </restriction>
+                </simpleType>
+            </attribute>
+        </complexType>
+    </element>
+
+    <element name="company">
+        <complexType>
+            <choice maxOccurs="2">
+                <element name="Importer" />
+                <element name="Manufacturer" />
+            </choice>
+        </complexType>
+    </element>
+
+    <!-- 배터리 (셀) 관련 정의 -->
+    <complexType name="cellType">
+        <sequence>
+            <element name="modelNum" />
+            <element name="supplier" />
+            <element name="material">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="리튬 폴리머" />
+                        <enumeration value="리튬 이온" />
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+    </complexType>
+
+    <element name="battery">
+        <complexType>
+            <sequence>
+                <element name="cell" type="powerBanks:cellType" />
+                <element name="capacity">
+                    <complexType mixed="true">
+                        <attribute name="capacityUnit" type="string" default="mAh" />
+                    </complexType>
+                </element>
+                <element name="rate">
+                    <simpleType>
+                        <restriction base="double">
+                            <minInclusive value="0" />
+                            <maxInclusive value="100" />
+                        </restriction>
+                    </simpleType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+    <!-- 입출력 태그 관련 정의 -->
+    <element name="power">
+        <complexType>
+            <sequence>
+                <element name="voltage" type="double" />
+                <element name="current">
+                    <complexType>
+                        <simpleContent>
+                            <extension base="string">
+                                <attribute name="unit" default="mA" />
+                            </extension>
+                        </simpleContent>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="powerIOtype">
+        <sequence maxOccurs="unbounded">
+            <element ref="powerBanks:power" />
+        </sequence>
+        <attribute name="portType" type="powerBanks:ports" />
+        <attribute name="fast-charging" type="powerBanks:fast-chargingTechnology" default="None" />
+    </complexType>
+
+    <!-- 입력 -->
+    <element name="inputs">
+        <complexType>
+            <sequence maxOccurs="unbounded">
+                <element name="input" type="powerBanks:powerIOtype" />
+            </sequence>
+            <attribute name="amount" type="integer" />
+            <attribute name="maxPower" type="string" />
+        </complexType>
+    </element>
+
+    <!-- 출력 -->
+    <element name="outputs">
+        <complexType>
+            <sequence maxOccurs="unbounded">
+                <element name="output" type="powerBanks:powerIOtype" />
+            </sequence>
+            <attribute name="amount" type="integer" />
+            <attribute name="maxPower" type="string" />
+        </complexType>
+    </element>
+
+
+    <simpleType name="ports">
+        <restriction base="string">
+            <enumeration value="usbType-A" />
+            <enumeration value="usbType-microB" />
+            <enumeration value="usbType-lightning" />
+            <enumeration value="usbType-C" />
+            <enumeration value="wireless" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="fast-chargingTechnology">
+        <restriction base="string">
+            <enumeration value="None" />
+            <enumeration value="QC1.0" />
+            <enumeration value="QC2.0" />
+            <enumeration value="QC3.0" />
+            <enumeration value="QC4.0" />
+        </restriction>
+    </simpleType>
+
+    <!-- 색상 태그 -->
+    <element name="color" type="string" />
+
+    <!-- 사이즈 태그 -->
+    <complexType name="sizeType">
+        <simpleContent>
+            <extension base="string">
+                <attribute name="unit" fixed="mm" />
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <element name="size">
+        <complexType>
+            <sequence>
+                <element name="thickness" type="powerBanks:sizeType" />
+                <element name="width" type="powerBanks:sizeType" />
+                <element name="length" type="powerBanks:sizeType" />
+            </sequence>
+        </complexType>
+    </element>
+
+    <!-- 무게 태그-->
+    <element name="weight">
+        <complexType>
+            <simpleContent>
+                <extension base="string">
+                    <attribute name="unit" fixed="g" />
+                </extension>
+            </simpleContent>
+        </complexType>
+    </element>
+
+    <!-- 출시 일자-->
+    <element name="ManufacturedDate">
+        <complexType>
+            <sequence>
+                <element name="year">
+                    <complexType mixed="true">
+                        <attribute name="part">
+                            <simpleType>
+                                <restriction base="string">
+                                    <enumeration value="early" />
+                                    <enumeration value="mid" />
+                                    <enumeration value="late" />
+                                </restriction>
+                            </simpleType>
+                        </attribute>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+    <!-- 충전 소요시간-->
+    <element name="chargingTime">
+        <complexType mixed="true">
+            <attribute name="criteria">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="fast-charging" />
+                        <enumeration value="normal-charging" />
+                        <enumeration value="wireless-charging" />
+                        <enumeration value="fast-wireless-charging" />
+                    </restriction>
+                </simpleType>
+            </attribute>
+        </complexType>
+    </element>
+
+    <!-- 인증 요소 관련 정의 -->
+    <element name="certified">
+        <complexType mixed="true">
+            <choice maxOccurs="unbounded">
+                <element name="national">
+                    <complexType mixed="true">
+                        <attribute type="string" name="name" />
+                    </complexType>
+                </element>
+                <element name="thirdParty">
+                    <simpleType>
+                        <list itemType="string" />
+                    </simpleType>
+                </element>
+            </choice>
+        </complexType>
+    </element>
+
+    <!-- Package 요소 관련 정의 -->
+    <complexType name="cableType">
+        <all>
+            <element name="standard">
+                <complexType mixed="true">
+                    <attribute name="allowedCurrent" type="string" />
+                </complexType>
+            </element>
+            <element name="port" type="string" />
+        </all>
+        <attribute name="length" type="string" use="required" />
+    </complexType>
+
+    <element name="package">
+        <complexType>
+            <all>
+                <element name="cable" type="powerBanks:cableType" />
+                <element name="others">
+                    <simpleType>
+                        <list itemType="string" />
+                    </simpleType>
+                </element>
+            </all>
+        </complexType>
+    </element>
+</schema>

@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<powerbanks xmlns="http://skuniv.ac.kr/cs/yoon/powerbanks" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://skuniv.ac.kr/cs/yoon/powerbanks Powerbanks.xsd">
+    <!-- 1번 제품 -->
+    <powerbank>
+        <name>EB-U1200</name>
+        <company>
+            <Importer>Samsung</Importer>
+            <Manufacturer>Scud Electronics</Manufacturer>
+        </company>
+        <warranty 시작기준="구매일" 날짜단위="년">1</warranty>
+
+        <battery>
+            <cell>
+                <modelNum>SP9858102</modelNum>
+                <supplier>LISHEN</supplier>
+                <material>리튬 이온</material>
+            </cell>
+            <capacity>10000 </capacity>
+            <rate>79.2</rate>
+        </battery>
+
+        <inputs amount="1" maxPower="15W">
+            <input portType="usbType-C">
+                <power>
+                    <voltage>12.0</voltage>
+                    <current>1.25</current>
+                </power>
+                <power>
+                    <voltage>9.0</voltage>
+                    <current>1.67</current>
+                </power>
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>2.0</current>
+                </power>
+            </input>
+        </inputs>
+
+        <outputs amount="2" maxPower="15W">
+            <output portType="wireless" fast-charging="QC2.0">
+                <power>
+                    <voltage>9.0</voltage>
+                    <current>1.67</current>
+                </power>
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>2.1</current>
+                </power>
+            </output>
+            <output portType="usbType-A" fast-charging="QC2.0">
+                <power>
+                    <voltage>12.0</voltage>
+                    <current>1.25</current>
+                </power>
+                <power>
+                    <voltage>9.0</voltage>
+                    <current>1.67</current>
+                </power>
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>2.1</current>
+                </power>
+            </output>
+        </outputs>
+
+        <color>샴페인 골드</color>
+
+        <size>
+            <thickness unit="mm">14.77</thickness>
+            <width unit="mm">71.03</width>
+            <length unit="mm">150.20</length>
+        </size>
+
+        <weight unit="g">350</weight>
+
+        <chargingTime criteria="fast-charging">
+            약 150분
+        </chargingTime>
+
+        <ManufacturedDate>
+            <year part="late">2018</year>
+        </ManufacturedDate>
+
+        <certified>
+            <national name="KC">XU100246-19070A</national>
+            <thirdParty>Qualcomm-QuickCharge</thirdParty>
+        </certified>
+
+        <package>
+            <cable length="0.2m">
+                <port>USB_typeA_to_C</port>
+                <standard allowedCurrent="4.5A">20AWG</standard>
+            </cable>
+            <others>
+                1-Adapter 1-Manual
+            </others>
+        </package>
+    </powerbank>
+
+    <!-- 2번 제품 -->
+    <powerbank>
+        <name>allo10000QC</name>
+        <company>
+            <Importer>allo korea</Importer>
+            <Manufacturer>Shenzen Bestier Power Bank</Manufacturer>
+        </company>
+        <warranty 시작기준="구매일" 날짜단위="개월">12</warranty>
+
+        <battery>
+            <cell>
+                <modelNum>LGA641865</modelNum>
+                <supplier>LG</supplier>
+                <material>리튬 폴리머</material>
+            </cell>
+            <capacity capacityUnit="mAh">10000 </capacity>
+            <rate>79.2</rate>
+        </battery>
+
+        <inputs amount="1" maxPower="18W">
+            <input portType="usbType-microB" fast-charging="QC3.0">
+                <power>
+                    <voltage>9.0</voltage>
+                    <current unit="mA">2.0</current>
+                </power>
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>2.0</current>
+                </power>
+            </input>
+        </inputs>
+
+        <outputs amount="2" maxPower="18W">
+            <output portType="usbType-A" fast-charging="QC2.0">
+                <power>
+                    <voltage>12.0</voltage>
+                    <current>1.5</current>
+                </power>
+                <power>
+                    <voltage>9.0</voltage>
+                    <current>2.0</current>
+                </power>
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>2.1</current>
+                </power>
+            </output>
+            <output portType="usbType-A">
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>2.4</current>
+                </power>
+            </output>
+        </outputs>
+
+        <color>파스텔 블루</color>
+
+        <size>
+            <thickness unit="mm">14.5</thickness>
+            <width unit="mm">76.5</width>
+            <length unit="mm">157.00</length>
+        </size>
+
+        <weight unit="g">250</weight>
+
+        <chargingTime criteria="normal-charging">
+            약 145분
+        </chargingTime>
+
+        <ManufacturedDate>
+            <year part="mid">2017</year>
+        </ManufacturedDate>
+
+        <certified>
+            <national name="KC">ZU10335-16001</national>
+            <thirdParty>Qualcomm-QuickCharge</thirdParty>
+        </certified>
+
+        <package>
+            <cable length="0.2m">
+                <port>USB_typeA_to_microB</port>
+                <standard allowedCurrent="2.4A">24AWG/2C</standard>
+            </cable>
+            <others>
+                1-Manual
+            </others>
+        </package>
+    </powerbank>
+
+    <!-- 3번 제품 -->
+    <powerbank>
+        <name>myPowerBank</name>
+        <company>
+            <Manufacturer>PowerBankKorea</Manufacturer>
+        </company>
+        <warranty 시작기준="구매일" 날짜단위="개월">15</warranty>
+
+        <battery>
+            <cell>
+                <modelNum>XG12345</modelNum>
+                <supplier>someSupplier Co.</supplier>
+                <material>리튬 폴리머</material>
+            </cell>
+            <capacity>15000 </capacity>
+            <rate>75.7</rate>
+        </battery>
+
+        <inputs amount="1" maxPower="12W">
+            <input portType="usbType-C" fast-charging="None">
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>2.0</current>
+                </power>
+            </input>
+        </inputs>
+
+        <outputs amount="2" maxPower="18W">
+            <output portType="usbType-A" fast-charging="QC2.0">
+                <power>
+                    <voltage>9.0</voltage>
+                    <current>2.0</current>
+                </power>
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>2.1</current>
+                </power>
+            </output>
+            <output portType="usbType-A">
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>2.4</current>
+                </power>
+            </output>
+        </outputs>
+
+        <color>스카이 화이트</color>
+
+        <size>
+            <thickness unit="mm">16.5</thickness>
+            <width unit="mm">80.5</width>
+            <length unit="mm">200.19</length>
+        </size>
+
+        <weight unit="g">350</weight>
+
+        <chargingTime criteria="fast-charging">
+            약 203분
+        </chargingTime>
+
+        <ManufacturedDate>
+            <year part="mid">2020</year>
+        </ManufacturedDate>
+
+        <certified>
+            <national name="KC">abcd-1234</national>
+        </certified>
+
+        <package>
+            <cable length="0.5m">
+                <port>USB_typeA_to_microB</port>
+                <standard allowedCurrent="1.0A">28AWG</standard>
+            </cable>
+            <others>
+                1-Manual
+            </others>
+        </package>
+    </powerbank>
+
+    <!-- 4번 제품 -->
+    <powerbank>
+        <name>EB-U3300XJEGKR</name>
+        <company>
+            <Manufacturer>Samsung</Manufacturer>
+        </company>
+        <warranty 시작기준="구매일" 날짜단위="년">1</warranty>
+
+        <battery>
+            <cell>
+                <modelNum>SP9858102</modelNum>
+                <supplier>LISHEN</supplier>
+                <material>리튬 이온</material>
+            </cell>
+            <capacity>10000 </capacity>
+            <rate>79.2</rate>
+        </battery>
+
+        <inputs amount="1" maxPower="25W">
+            <input portType="usbType-C" fast-charging="QC3.0">
+                <power>
+                    <voltage>12.0</voltage>
+                    <current>2.1</current>
+                </power>
+                <power>
+                    <voltage>9.0</voltage>
+                    <current>1.67</current>
+                </power>
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>2.0</current>
+                </power>
+            </input>
+        </inputs>
+
+        <outputs amount="3" maxPower="25W">
+            <output portType="wireless" fast-charging="QC2.0">
+                <power>
+                    <voltage>9.0</voltage>
+                    <current>2.1</current>
+                </power>
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>2.1</current>
+                </power>
+            </output>
+            <output portType="usbType-A" fast-charging="QC2.0">
+                <power>
+                    <voltage>12.0</voltage>
+                    <current>2.1</current>
+                </power>
+                <power>
+                    <voltage>9.0</voltage>
+                    <current>1.67</current>
+                </power>
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>3.0</current>
+                </power>
+            </output>
+            <output portType="usbType-C" fast-charging="QC2.0">
+                <power>
+                    <voltage>12.0</voltage>
+                    <current>2.1</current>
+                </power>
+                <power>
+                    <voltage>9.0</voltage>
+                    <current>1.67</current>
+                </power>
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>3.0</current>
+                </power>
+            </output>
+        </outputs>
+
+        <color>다크 그레이</color>
+
+        <size>
+            <thickness unit="mm">15.3</thickness>
+            <width unit="mm">72.00</width>
+            <length unit="mm">154.20</length>
+        </size>
+
+        <weight unit="g">251</weight>
+
+        <chargingTime criteria="fast-charging">
+                약 90분
+            </chargingTime>
+
+        <ManufacturedDate>
+            <year part="late">2020</year>
+        </ManufacturedDate>
+
+        <certified>
+            <national name="KC">R-R-SEC-EBU3300</national>
+            <thirdParty>Qualcomm-QuickCharge</thirdParty>
+        </certified>
+
+        <package>
+            <cable length="0.2m">
+                <port>USB_typeC_to_C</port>
+                <standard allowedCurrent="4.5A">20AWG</standard>
+            </cable>
+            <others>
+                    1-Adapter 1-Manual
+                </others>
+        </package>
+    </powerbank>
+
+    <!-- 5번 제품 -->
+    <powerbank>
+        <name>Xiaomi PowerBank 3 </name>
+        <company>
+            <Importer>myImporter</Importer>
+            <Manufacturer>Xiaomi</Manufacturer>
+        </company>
+        <warranty 시작기준="구매일" 날짜단위="년">1</warranty>
+
+        <battery>
+            <cell>
+                <modelNum>A8451FGiVi</modelNum>
+                <supplier>ATL</supplier>
+                <material>리튬 폴리머</material>
+            </cell>
+            <capacity>20000 </capacity>
+            <rate>78.2</rate>
+        </battery>
+
+        <inputs amount="1" maxPower="45W">
+            <input portType="usbType-C" fast-charging="QC4.0">
+                <power>
+                    <voltage>12.0</voltage>
+                    <current>3.0</current>
+                </power>
+                <power>
+                    <voltage>9.0</voltage>
+                    <current>1.67</current>
+                </power>
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>3.0</current>
+                </power>
+            </input>
+        </inputs>
+
+        <outputs amount="3" maxPower="45W">
+            <output portType="usbType-C" fast-charging="QC4.0">
+                <power>
+                    <voltage>20.0</voltage>
+                    <current>2.0</current>
+                </power>
+                <power>
+                    <voltage>15.0</voltage>
+                    <current>2.1</current>
+                </power>
+                <power>
+                    <voltage>12.0</voltage>
+                    <current>3.0</current>
+                </power>
+                <power>
+                    <voltage>9.0</voltage>
+                    <current>3.0</current>
+                </power>
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>3.0</current>
+                </power>
+            </output>
+            <output portType="usbType-A" fast-charging="None">
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>3.0</current>
+                </power>
+            </output>
+            <output portType="usbType-A" fast-charging="QC2.0">
+                <power>
+                    <voltage>12.0</voltage>
+                    <current>1.5</current>
+                </power>
+                <power>
+                    <voltage>9.0</voltage>
+                    <current>2.0</current>
+                </power>
+                <power>
+                    <voltage>5.0</voltage>
+                    <current>2.4</current>
+                </power>
+            </output>
+        </outputs>
+
+        <color>차콜 블랙</color>
+
+        <size>
+            <thickness unit="mm">27.5</thickness>
+            <width unit="mm">73.5</width>
+            <length unit="mm">153.5</length>
+        </size>
+
+        <weight unit="g">439.6</weight>
+
+        <chargingTime criteria="fast-charging">
+                약 100분
+        </chargingTime>
+
+        <ManufacturedDate>
+            <year part="late">2019</year>
+        </ManufacturedDate>
+
+        <certified>
+            <national name="KC">abcd-1234</national>
+            <thirdParty>Qualcomm-QuickCharge</thirdParty>
+        </certified>
+
+        <package>
+            <cable length="0.2m">
+                <port>USB_typeC_to_C</port>
+                <standard allowedCurrent="4.5A">20AWG</standard>
+            </cable>
+            <others>
+                    1-Adapter 1-Manual
+            </others>
+        </package>
+    </powerbank>
+</powerbanks>
