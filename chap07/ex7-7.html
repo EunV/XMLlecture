@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ex7-7</title>
+    <script>
+        var xmldoc = new ActiveXObject("MSxml2.DOMDocument");
+        var simple = xmldoc.createElement("simple");
+        var names = new Array("김기수", "홍길동", "신현아", "장나라");
+
+        for (var i = 0; i < names.length; i++) {
+            var nameNode = xmldoc.createElement("name");
+            var textNode = xmldoc.createTextNode(names[i]);
+            nameNode.appendChild(textNode);
+            simple.appendChild(nameNode);
+        }
+
+        xmldoc.documentElement = simple;
+        alert(xmldoc.xml);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

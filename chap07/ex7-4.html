@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <p>실습 #1 Child 요소 접근하기</p>
+        <script language = "JavaScript">
+            var xmldoc = new ActiveXObject("MSXML.DOMDOcument");
+            xmldoc.async = false;
+            xmldoc.load('ex7-4.xml');
+
+            var root = xmldoc.documentElement;
+            for(var i = 0;i < root.childNodes.length; i++){
+                alert(root.childNodes(i).firstChild.nodeValue);
+            }
+        </script>
+    </body>
+</html>

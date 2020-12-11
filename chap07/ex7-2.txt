@@ -1,0 +1,20 @@
+0. document (<-- document Root)                                     //code : DOMDocument xmldoc
+    1. Element("order") (<--'Root Element' or 'documentElement')    //code : xmldoc.documentElement
+        2. Attribute("number")                                      //code : xmldoc.documentElement.attributes[0]
+            3. Text("3123")                                         //code : xmldoc.documentElement.attributes[0].firstChild.nodeValue
+
+        2. Element("date")                                          //code : xmldoc.documentElement.firstChild
+            3. Text("2002/1/1")                                     //code : xmldoc.documentElement.firstChild.firstChild.nodeValue
+
+        2. Element("customer")                                      //code : xmldoc.documentElement.childNodes[1]
+            3. Attribute("id")                                      //code : xmldoc.documentElement.childNodes[1].attributes[0]
+                4. Text("216A")                                     //code : xmldoc.documentElement.childNodes[1].attributes[0].nodeValue
+            3. Text("Company A")                                    //code : xmldoc.documentElement.childNodes[1].firstChild.nodeValue
+    
+        2. Element("item")                                          //code : xmldoc.documentElement.getElementsByTagName("item")[0]
+            3. Element("part-number")                               //code : xmldoc.documentElement.getElementsByTagName("item")[0].firstChild
+                4. Attribute("warehouse")                           //code : xmldoc.documentElement.getElementsByTagName("item")[0].firstChild.getAttributeNode("warehouse")
+                    5.Text("Warehouse 11")                          //code : xmldoc.documentElement.getElementsByTagName("part-number")[0].attributes[0].nodeValue
+                4. Text("E16-25A")                                  //code : xmldoc.documentElement.getElementsByTagName("part-number")[0].firstChild.nodeValue
+            3. Element("quantity")                                  //code : xmldoc.documentElement.getElementsByTagName("quantity")[0]
+                4. Text("16")                                       //code : xmldoc.documentElement.getElementsByTagName("quantity")[0].firstChild.nodeValue

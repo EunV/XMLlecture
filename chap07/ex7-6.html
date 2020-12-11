@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex7-6</title>
+    <script language="JavaScript">
+        var xmldoc = new ActiveXObject("MSXML.DOMDocument");
+        xmldoc.async = false;
+        xmldoc.load("ex7-6.xml");
+        var nodes = xmldoc.selectNodes("//name");
+        /*
+            var nodes  = xmldoc.selectNodes("//@first");
+        */
+        for(var i = 0; i<nodes.length; i++){
+            var attrList = nodes[i].attributes
+            alert(attrList.getNamedItem("first").nodeValue);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

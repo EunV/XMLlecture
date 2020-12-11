@@ -1,0 +1,20 @@
+0. document (<-- document Root)
+    1. Element("order") (<--'Root Element' or 'documentElement')
+        2. Attribute("number")
+            3. Text("3123")
+
+        2. Element("date")
+            3. Text("2002/1/1")
+
+        2. Element("customer")
+            3. Attribute("id")
+                4. Text("216A")
+            3. Text("Company A")
+    
+        2. Element("item")
+            3. Element("part-number")
+                4. Attribute("warehouse")
+                    5.Text("Warehouse 11")
+                4. Text("E16-25A")
+            3. Element("quantity")
+                4. Text("16")

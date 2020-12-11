@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order number= "3123">
+    <date> 2002/1/1</date>
+    <customer id= "216A"> Company A </customer>
+    <item>
+        <part-number warehouse= "Warehouse 11"> E16-25A </part-number>
+        <quantity> 16 </quantity>
+    </item>
+</order>

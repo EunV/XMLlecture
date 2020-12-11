@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <p>실습 #2 특정 요소 찾기</p>
+    <script language="JavaScript">
+        var xmldoc = new ActiveXObject("MSXML.DOMDOcument");
+        xmldoc.async = false;
+        xmldoc.load('ex7-5.xml');
+
+        var tagLists = xmldoc.getElementsByTagName('last');
+        var tagLists2 = xmldoc.selectNodes('//last');
+
+        output = "<h3>getElementsByTagName(tagname)</h3>";
+        output += '<p>';
+        for (var i = 0; i < tagLists.length; i++) {
+            output += tagLists[i].firstChild.nodeValue + '  ';
+        }
+        output += "</p><h3>selectNodes(xpath)</h3><p>";
+
+        for (var i = 0; i < tagLists2.length; i++) {
+            output += tagLists2[i].firstChild.nodeValue + '  ';
+        }
+        output += '</p>';
+        document.write(output);
+    </script>
+</body>
+
+</html>

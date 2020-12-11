@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+        var xmldoc;
+        var xmlErr;
+        function FileLoad() {
+            xmldoc = new ActiveXObject("MSXML.DOMDocument");
+            xmldoc.async = false;
+            xmldoc.load(path.value);
+            xmlErr = xmldoc.parseError;
+            if (xmlErr.errorCode != 0)
+                alert("Error!, " + xmlErr.reason);
+            else
+                alert("Success!");
+        }
+        function Execute() {
+            var selectionString;
+            try {
+                selectionString = eval(syntax.value);
+            }
+            catch (e) {
+                selectionString = null;
+            }
+            alert(selectionString);
+        }
+    </script>
+</head>
+
+<body>
+    XML File: <input type="text" name="path" size=60>
+    <a href="javascript:FileLoad()"> 파일읽기 </a> <br><br>
+    Execute: <input type="text" name="syntax" size=60>
+    <a href="javascript:Execute()"> 실행하기 </a>
+</body>
+
+</html>
