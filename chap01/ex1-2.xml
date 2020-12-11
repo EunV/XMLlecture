@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="EUC-KR"?>
+<!DOCTYPE students [
+    <!ELEMENT students      (student)*>
+    <!ELEMENT student       (name,age,specialty,grade)>
+    <!ELEMENT name          (#PCDATA)>
+    <!ELEMENT age           (#PCDATA)>
+    <!ELEMENT specialty     (#PCDATA)>
+    <!ELEMENT grade         (#PCDATA)>
+]>
+
+<students>
+    <student>
+        <name>윤웅상</name>
+        <age>21</age>
+        <specialty>컴퓨터과학</specialty>
+        <grade>3</grade>
+    </student>
+
+    <student>
+        <name>홍길동</name>
+        <age>26</age>
+        <specialty>경영학</specialty>
+        <grade>4</grade>
+    </student>
+</students>
