@@ -1,0 +1,32 @@
+<!ELEMENT BookCatalog (Book*)>
+<!ELEMENT Book ((Title|BookCode),CoAuthor,Year,Price?,Summary)>
+<!ENTITY OSYoon "윤웅상">
+<!ENTITY YoonWS SYSTEM "myName.txt">
+
+<!ATTLIST Book lang CDATA "Korean">
+<!--<!ATTLIST Book lang CDATA #FIXED "Korean">-->
+<!--<!ATTLIST Book lang CDATA #IMPLIED>--> <!-- 생략 가능 -->
+<!--<!ATTLIST Book lang CDATA #REQUIRED>-->
+
+<!ATTLIST Book code ID #IMPLIED>
+<!-- <!ATTLIST Book code ID #REQUIRED> -->
+<!-- <!ATTLIST Book code ID > --> <!-- 오류 -->
+
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT BookCode (#PCDATA)>
+
+<!ELEMENT Author (#PCDATA)>
+<!ELEMENT CoAuthor (#PCDATA|Author)*>
+
+<!ELEMENT Year (#PCDATA)>
+
+<!ELEMENT Price (#PCDATA)>
+
+<!--<!ATTLIST Price unit ( 원 | 달러 | 엔 | 프랑) #IMPLIED>-->
+<!ATTLIST Price unit ( 원 | 달러 | 엔 | 프랑) #IMPLIED>
+
+<!ELEMENT Summary ANY>
+<!ELEMENT Review ANY>
+<!ELEMENT Stars (#PCDATA)>
+
+<!-- <!ENTITY SHM "손흥민"> -->

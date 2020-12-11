@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE 제품목록 [
+    <!ELEMENT 제품목록 EMPTY>
+]>
+ <제품목록>
+ test
+ </제품목록>

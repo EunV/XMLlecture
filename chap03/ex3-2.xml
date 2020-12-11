@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE BookCatalog [
+    <!ELEMENT BookCatalog (Book*)>
+    <!ELEMENT Book (Title,Author,Year)>
+    <!ELEMENT Title (#PCDATA)>
+    <!ELEMENT Author (#PCDATA)>
+    <!ELEMENT Year (#PCDATA)>
+]>
+
+<BookCatalog>
+    <Book>
+        <Title>XML 프로그래밍</Title>
+        <Author>윤웅상</Author>
+        <Year>2020</Year>
+    </Book>
+
+    <Book>
+        <Title>C++ 프로그래밍</Title>
+        <Author>홍길동</Author>
+        <Year>2019</Year>
+    </Book>
+
+    <Book>
+        <Title>Java 바이블</Title>
+        <Author>린드블럼</Author>
+        <Year>2010</Year>
+    </Book>
+
+    <Book>
+        <Title>컴퓨터구조론</Title>
+        <Author>다니엘 킴</Author>
+        <Year>2011</Year>
+    </Book>
+    
+    <Book>
+        <Title>DIY 인테리어</Title>
+        <Author>마동석</Author>
+        <Year>2019</Year>
+    </Book>
+</BookCatalog>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE BookCatalog SYSTEM "bookcatalog.dtd">
+
+<BookCatalog>
+    <Book lang = "English">
+        <Title>XML의 정석</Title>
+        <CoAuthor>
+            <Author>윤웅상</Author>
+            제임스
+            <Author>존</Author>
+            <Author>찰리</Author>
+        </CoAuthor>
+        <Year>2020</Year>
+        <Summary>
+            1판 발행 : <Year>2015</Year>
+            <![CDATA[ 'XML의 정석' 한 권이면 여러분도 전문가가 될 수 있습니다!  ]]>
+            <Title>쉬운 웹서비스</Title> 교재도 함께 참고해보세요. 
+            <Review>
+                <Stars>10</Stars>
+                예제 소스와 연습 문제가 다양해서 이해하기 쉬워요!
+            </Review>
+        </Summary>
+    </Book>
+
+    <Book lang = "Japanese">
+        <Title>슈퍼 C++</Title>
+        <CoAuthor>
+            정훈
+            <Author>찰리</Author>
+            <Author>오민수</Author>
+        </CoAuthor>
+        <Year>2019</Year>
+        <Summary>
+            사은품
+            <Title>특별 부록 - STL 정복하기</Title>
+            <![CDATA[ <<< 4년 연속 베스트셀러 >>> 강의 현장을 그대로 담은 c++ 입문서]]>
+        </Summary>
+    </Book>
+
+    <Book lang = "Chinese">
+        <Title>모두의 기업</Title>
+        <CoAuthor>
+            Mr. Lee
+            <Author>김철수</Author>
+        </CoAuthor>
+        <Year>2010</Year>
+        <Summary>
+            <![CDATA[ "부자그룹 CEO" 김철수가 말하는 경영전략]]>
+            <Review>
+                <Stars>7.2</Stars>
+            </Review>
+        </Summary>
+    </Book>
+
+    <Book>
+        <BookCode>Science - 1164</BookCode>
+        <CoAuthor>
+            <Author>제임스 킴</Author>
+            스티븐 할림
+        </CoAuthor>
+        <Year>2017</Year>
+        <Summary>
+            <![CDATA[ 세계를 떠들썩하게 한 '알파고'로 살펴보는 IT 기술 ]]>
+        </Summary>
+    </Book>
+
+    <Book>
+        <Title>쉬운 캘리그라피</Title>
+        <CoAuthor>
+            <Author>정현지</Author>
+            <Author>이하은</Author>
+            한정민
+        </CoAuthor>
+        <Year>2019</Year>
+        <Summary>
+            <![CDATA[ 예쁜 손글씨 & 카드 만들기. 캘리그라피로 마음을 전해보세요. 고급 펜 & 카드지 제공]]>
+        </Summary>
+    </Book>
+
+    <Book>
+        <BookCode>Soccer-1234</BookCode>
+        <CoAuthor>
+            손흥민
+            <Author>박지성</Author>
+        </CoAuthor>
+        <Year>2020</Year>
+        <Summary>
+            <![CDATA[ <2002 월드컵> , <프리미어리그> 선수들의 축구일기! ]]>
+        </Summary>
+    </Book>
+
+</BookCatalog>

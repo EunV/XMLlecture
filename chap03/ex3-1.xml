@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Products [
+    <!ELEMENT Products (Product*)>
+    <!ELEMENT Product (Maker,Name,Price,Discount,Code)>
+    <!ELEMENT Maker (#PCDATA)>
+    <!ELEMENT Name (#PCDATA)>
+    <!ELEMENT Price (#PCDATA)>
+    <!ELEMENT Discount (#PCDATA)>
+    <!ELEMENT Code (#PCDATA)>
+]>
+
+<Products>
+    <Product>
+        <Maker></Maker>
+        <Name></Name>
+        <Price></Price>
+        <Discount></Discount>
+        <Code></Code>
+    </Product>
+</Products>

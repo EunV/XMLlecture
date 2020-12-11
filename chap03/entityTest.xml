@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE memo [
+    <!ELEMENT memo (#PCDATA)>
+    <!ENTITY 내생일날 "2003년 03월 25일">
+]>
+<memo>
+    제 생일은 &내생일날; 입니다!
+</memo>
