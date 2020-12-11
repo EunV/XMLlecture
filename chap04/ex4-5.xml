@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AudioCatalog 
+    xmlns="http://skuniv.ac.kr/cs/yoon/audio"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://skuniv.ac.kr/cs/yoon/audio ex4-5.xsd">
+
+    <Cd>
+        <Artist>홍길동</Artist>
+        <Title>오늘</Title>
+        <Genre>재즈</Genre>
+        <Released-date>2020-10-14</Released-date>
+        <Song>아침밥</Song>
+        <Song>점심의 커피</Song>
+        <Song>마성의 치킨</Song>
+    </Cd>
+
+    <Cd>
+        <Artist>김서울</Artist>
+        <Title>서울에서 부산까지</Title>
+        <Genre>트로트</Genre>
+        <Released-date>2020-09-14</Released-date>
+        <Song>기차 안에서</Song>
+        <Song>동해 바다</Song>
+        <Song>해운대 앞</Song>
+    </Cd>
+
+    <Cassette>
+        <Artist>메론</Artist>
+        <Title>OurLove</Title>
+        <Genre>락</Genre>
+        <Released-date>2010-10-14</Released-date>
+        <Song>Paint</Song>
+    </Cassette>
+
+    <Mp3>
+        <Artist>찰리</Artist>
+        <Title>Alone</Title>
+        <Genre>발라드</Genre>
+        <Released-date>2020-01-01</Released-date>
+        <Song>You're so beautiful</Song>
+        <Song>I am not alone</Song>
+    </Mp3>
+
+    <Record>
+        <Artist>다니엘 리</Artist>
+        <Title>Salary Man</Title>
+        <Genre>클래식</Genre>
+        <Released-date>2008-01-23</Released-date>
+        <Song>빛나는 강</Song>
+        <Song>한강과 연인</Song>
+    </Record>
+</AudioCatalog>

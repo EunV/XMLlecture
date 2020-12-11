@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+        targetNamespace="http://skuniv.ac.kr/cs/yoon/books" 
+        xmlns:myBooks="http://skuniv.ac.kr/cs/yoon/books" 
+        elementFormDefault="qualified">
+
+    <!-- 아래처럼 sequence 등 content model은 밖으로 뺀다고 해서 전역으로 만들 수는 없다. -->
+    <!-- 예를 들어 아래의 코드를 실행하면 에러 발생-->
+    <!-- 
+    <sequence name="BookSeq">
+        <element name="Book" maxOccurs="unbounded">
+            <complexType>
+                <sequence>
+                    <element name="Title" type="string" />
+                    <element name="Author" type="string" />
+                    <element name="Year" type="string" />
+                </sequence>
+            </complexType>
+        </element>
+    </sequence>
+    -->
+
+    <!-- 아래와 같이 group으로 묶어서 뽑아내면 sequence(뿐만 아니라 choice ,all content-model을)를 전역으로 만들 수 있다-->
+    <!-- Content Model이란 , ComplexType 요소의 하위 요소들로 choice , sequence , all이 있다.-->
+    <group name="bookInfoGroup">
+        <sequence>
+            <element name="Title" type="string" />
+            <element name="Author" type="string" />
+            <element name="Year" type="string" />
+        </sequence>
+    </group>
+
+    <element name="BookCatalog">
+        <complexType>
+            <sequence>
+                <element name="Book" maxOccurs="unbounded">
+                    <complexType>
+                        <group ref="myBooks:bookInfoGroup" />
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

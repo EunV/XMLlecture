@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skuniv.ac.kr/cs/yoon/audio" xmlns:myAudio="http://skuniv.ac.kr/cs/yoon/audio" elementFormDefault="qualified">
+
+
+    <group name="AlbumGroup">
+        <sequence>
+            <element name="Artist" type="string" />
+            <element name="Title" type="string" />
+            <element name="Genre" type="string" />
+            <element name="Released-date" type="string" />
+            <element name="Song" maxOccurs="unbounded" type="string" />
+        </sequence>
+    </group>
+
+    <complexType name="AlbumType">
+        <group ref="myAudio:AlbumGroup" />
+    </complexType>
+
+
+    <element name="AudioCatalog">
+        <complexType>
+            <choice maxOccurs="unbounded">
+                <element name="Cd">
+                    <complexType>
+                        <group ref="myAudio:AlbumGroup" />
+                    </complexType>
+                </element>
+                <element name="Cassette"></element>
+                <element name="Record"></element>
+                <element name="Mp3"></element>
+            </choice>
+        </complexType>
+    </element>
+</schema>
+
+
+<!-- 
+group으로 재사용말고 <element name="AlbumGroup">
+		<complexType>
+		<sequence>
+					<element name="artist" type="string"/>
+					<element name="title" type="string"/>
+					<element name="genre" type="string"/>
+					<element name="released-date" type="string"/>
+					<element name="song" type="string" maxOccurs="unbounded"/>
+		</sequence>
+		</complexType>
+	</element>                                     이거는 안되나요?
+AlbumGroup자체를 element로 정의했어요..
+
+
+
+-->

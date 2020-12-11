@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+        targetNamespace="http://skuniv.ac.kr/cs/yoon/audio" 
+        xmlns:myAudio="http://skuniv.ac.kr/cs/yoon/audio" 
+        elementFormDefault="qualified">
+
+    <group name="AlbumGroup">
+        <sequence>
+            <element name="Artist" type="string" />
+            <element name="Title" type="string" />
+            <element name="Genre" type="string" />
+            <element name="Released-date" type="string" />
+            <element name="Song" maxOccurs="unbounded" type="string"/>
+        </sequence>
+    </group>
+
+    <complexType name="AlbumType">
+        <group ref="myAudio:AlbumGroup" />
+    </complexType>
+
+    <element name="AudioCatalog">
+        <complexType>
+            <choice maxOccurs="unbounded">
+                <element name="Cd" type="myAudio:AlbumType"/>
+                <element name="Cassette" type="myAudio:AlbumType"/>
+                <element name="Record" type="myAudio:AlbumType"/>
+                <element name="Mp3" type="myAudio:AlbumType"/>
+            </choice>
+        </complexType>
+    </element>
+</schema>

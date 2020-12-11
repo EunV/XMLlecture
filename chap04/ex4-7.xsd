@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+        targetNamespace="http://skuniv.ac.kr/cs/yoon/audio" 
+        xmlns:myAudio="http://skuniv.ac.kr/cs/yoon/audio" 
+        elementFormDefault="qualified">
+   
+    <!-- PlayTime 요소 관련 정의-->
+    <simpleType name="hourScope">
+        <restriction base="int">
+            <minInclusive value="0" />
+            <maxExclusive value="10" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="secondScope">
+        <restriction base="int">
+            <minInclusive value="0" />
+            <maxExclusive value="60" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="minuteScope">
+        <restriction base="int">
+            <minInclusive value="0" />
+            <maxExclusive value="60" />
+        </restriction>
+    </simpleType>
+
+    <group name="TimeGroup">
+        <sequence>
+            <element name="hours" type="myAudio:hourScope" />
+            <element name="minutes" type="myAudio:minuteScope" />
+            <element name="seconds" type="myAudio:secondScope" />
+        </sequence>
+    </group>
+
+    <complexType name="PlayTimeType">
+        <group ref="myAudio:TimeGroup" />
+    </complexType>
+    <!-- PlayTime 요소 관련 정의 끝-->
+
+    <group name="AlbumGroup">
+        <sequence>
+            <element name="Artist" type="string" />
+            <element name="Title" type="string" />
+            <element name="Genre" type="string" />
+            <element name="Released-date" type="string" />
+            <element name="Song" maxOccurs="unbounded">
+                <complexType mixed="true">
+                    <sequence>
+                        <element name="playTime" type="myAudio:PlayTimeType"/>
+                    </sequence>
+                </complexType>
+            </element>
+        </sequence>
+    </group>
+
+    <complexType name="AlbumType">
+        <group ref="myAudio:AlbumGroup" />
+    </complexType>
+
+    <element name="AudioCatalog">
+        <complexType>
+            <choice maxOccurs="unbounded">
+                <element name="Cd" type="myAudio:AlbumType"/>
+                <element name="Cassette" type="myAudio:AlbumType"/>
+                <element name="Record" type="myAudio:AlbumType"/>
+                <element name="Mp3" type="myAudio:AlbumType"/>
+            </choice>
+        </complexType>
+    </element>
+</schema>

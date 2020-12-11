@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skuniv.ac.kr/cs/yoon/books" xmlns:myBooks="http://skuniv.ac.kr/cs/yoon/books" elementFormDefault="qualified">
+
+    <!-- Local(지역) 형태-->
+    <element name="BookCatalog">
+        <complexType>
+            <sequence>
+                <!-- 여러개의 Book 요소를 넣기 위함. minOccurs의 기본값은 1이므로 생략-->
+                <element name="Book" maxOccurs="unbounded">
+                    <complexType>
+                        <sequence>
+                            <element name="Title" type="string" />
+                            <element name="Author" type="string" />
+                            <element name="Year" type="string" />
+                        </sequence>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+    <!-- Global(전역) 형태 -->
+    <!-- <element name="Book">
+        <complexType>
+            <sequence>
+                <element name="Title" type="string" />
+                <element name="Author" type="string" />
+                <element name="Year" type="string" />
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="BookCatalog">
+        <complexType>
+            <sequence>
+                <element ref="myBooks:Book" maxOccurs="unbounded" />
+            </sequence>
+        </complexType>
+    </element> -->
+
+</schema>

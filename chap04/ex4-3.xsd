@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+        targetNamespace="http://skuniv.ac.kr/cs/yoon/books" 
+        xmlns:myBooks="http://skuniv.ac.kr/cs/yoon/books" 
+        elementFormDefault="qualified">
+
+    <!-- Target, Author, Year를 뽑아내기 -->
+    <element name="Title" type="string" />
+    <element name="Author" type="string" />
+    <element name="Year" type="string" />
+
+    <!-- 전역으로 뽑아낸 Book 태그. unbounded 삭제-->
+    <element name="Book">
+        <complexType>
+            <sequence>
+                <element ref="myBooks:Title" />
+                <element ref="myBooks:Author" />
+                <element ref="myBooks:Year" />
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="BookCatalog">
+        <complexType>
+            <sequence>
+                <!-- 이곳에 Book태그에 대해 ubounded 추가-->
+                <element ref="myBooks:Book" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

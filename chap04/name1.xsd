@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+        targetNamespace="http://skuniv.ac.kr/cs/yoonws/name" 
+        xmlns:target="http://skuniv.ac.kr/cs/yoonws/name" 
+        elementFormDefault="qualified">
+
+    <!-- Local-->
+    <element name="name">
+        <complexType>
+            <sequence>
+                <element name="first" type="string"/>
+                <element name="middle" type="string"/>
+                <element name="last" type="string"/>
+            </sequence>
+            <attribute name="title" type="string"/>
+        </complexType>
+    </element>
+    
+    <!-- Global-->
+    <!-- <complexType name="nameType">
+        <sequence>
+            <element name="first" type="string" />
+            <element name="middle" type="string" />
+            <element name="last" type="string" />
+        </sequence>
+        <attribute name="title" type="string" />
+    </complexType> -->
+
+    <!-- 이렇게 하면 nameType을 찾지 못함-->
+    <!-- <element name="name" type="nameType"/> -->
+
+    <!-- nameType이 있는 네임스페이스 지정-->
+    <!-- <element name="name" type="target:nameType"/> -->
+
+</schema>
