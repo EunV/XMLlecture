@@ -1,4 +1,4 @@
-# Chapter 01 - Introduction
+# Chapter 08 - XML Programming API 2 - Simple API for XML(SAX)
 
 ## 1. SAX의 개념
 - The Simple API for XML
