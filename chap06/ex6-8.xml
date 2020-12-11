@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ex6-8.xsl" ?>
+
+<people>
+    <name first = "길동" last = "홍"/>
+    <name first = "춘향" last = "성"/>
+    <name first = "몽룡" last = "이"/>
+    <name first = "향단" last = ""/>
+</people>

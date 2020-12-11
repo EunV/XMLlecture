@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ex6-4.xsl" ?>
+
+<simple>
+    <name>John</name>
+    <name>David</name>
+    <name>Mark</name>
+    <name>Kim</name>
+    <name>Agatha</name>
+    <name>Park</name>
+</simple>
