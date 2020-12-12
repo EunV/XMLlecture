@@ -3,7 +3,6 @@
 ## 1. XSLT란?
 **eXtensible Stylesheet Language Transformation**
 **XML 문서를 다른 문법(HTML, XML 등의 MarkupLanguage)에 따르는 문서로 변환시키는 기술**
-**플랫폼, 언어 중립적인 인터페이스** 
 * XSL (또는 XSLT) 파일의 확장자 : .xsl
 * XSLT 실행
   * IE를 이용
@@ -382,7 +381,7 @@
 
 ~~~xml
 <!-- Result XML-->
-<order id= <order id="A-213" size="123"/>
+<order id="A-213" size="123"/>
 ~~~
 
 ## 16. 복사하기 \<xsl:copy-of>
